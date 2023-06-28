@@ -14,10 +14,10 @@ soup = BeautifulSoup(browser.text, "html.parser")
 star_table = soup.find_all('table', {"class":"wikitable sortable"})
 
 total_table = len(star_table)
-
+print(total_table)
 temp_list= []
 
-table_rows = star_table[1].find_all('tr')
+table_rows = star_table[2].find_all('tr')
 
 for tr_tags in table_rows:
     td_tags = tr_tags.find_all('td')
